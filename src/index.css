@@ -1,0 +1,72 @@
+
+
+html, body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  color: #efe8e8;
+  scroll-behavior: smooth;
+}
+
+/* .background {
+  position: fixed;
+  z-index: -20;
+  min-height: 100vh;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  background-size: cover;
+  background-color: #000; /* Add this line 
+  pointer-events:auto; Ensure it can receive mouse events
+} */
+
+
+.navbar{
+  border: 1px solid rgba(231, 220, 229, 0.132);
+  font-size: 16px;
+  border-radius: 9px;
+  position: fixed;
+  height: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 22vw;
+  top: 4vh;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  background-color: color-mix(in oklab, #4f4c4c 15%, transparent);
+  scroll-margin-top: 40px; /* wysokość navbaru */
+}
+
+.navbar ul{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content:space-evenly;
+  padding: 5px;
+  margin: 5px;
+  
+}
+
+.navbar ul a{
+  cursor:pointer;
+  text-decoration: none;
+  color: inherit;
+  width: 50px;
+  text-align: center;
+  
+}
+.navbar ul a:hover{
+  opacity: 0.5;
+  transition: all;
+  transition-duration: 300ms;
+}
+
+

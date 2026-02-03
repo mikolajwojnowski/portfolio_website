@@ -1,0 +1,13 @@
+/* ...existing code... */
+
+.my-name {
+  margin-top: 60px; /* Adjust to match navbar height + offset */
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #DBCBD8;
+  z-index: 11;
+  position: relative;
+}
+
+/* ...existing code... */

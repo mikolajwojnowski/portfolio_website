@@ -1,5 +1,11 @@
 /* ...existing code... */
 
+.background-layer {
+  position: fixed;
+  inset: 0;
+  z-index: -20;
+}
+
 .my-name {
   margin-top: 60px; /* Adjust to match navbar height + offset */
   text-align: center;

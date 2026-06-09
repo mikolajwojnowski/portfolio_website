@@ -1,24 +1,20 @@
+import './Section.css'
 import './About.css'
 import { FaArrowRight } from "react-icons/fa6";
 
 
 const About = () => {
     return(
-        <>
-        <div id="about" className="parent-div">
+        <section id="about" className="section-card about-section">
             <div className='about-me'>
-                {/* <h1>About Me</h1> */}
-                {/* <hr /> */}
-                <h2>
-                     I'm 23-year old Computer Science student with a passion for technology and programming.
-                </h2>
+                <h1 className="section-heading">About Me</h1>
+                <p className="about-copy">I'm a 23-year-old Computer Science student with a passion for technology and programming.</p>
             </div>
-            <div className='about-me-btn'>
-                <p className='about-me-text'>Get to know me better</p>
-                <p className='about-me-text-icon'><FaArrowRight /></p>
-            </div>
-        </div>
-        </>
+            {/* <a className='about-me-btn' href="#tech">
+                <span className='about-me-text'>Get to know me better</span>
+                <span className='about-me-text-icon'><FaArrowRight /></span>
+            </a> */}
+        </section>
     )
 }
 

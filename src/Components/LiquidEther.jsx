@@ -27,7 +27,6 @@ export default function LiquidEther({
   const webglRef = useRef(null);
   const resizeObserverRef = useRef(null);
   const rafRef = useRef(null);
-  const intersectionObserverRef = useRef(null);
   const isVisibleRef = useRef(true);
   const resizeRafRef = useRef(null);
 
@@ -287,10 +286,6 @@ export default function LiquidEther({
         const now = performance.now();
         const idle = now - this.manager.lastUserInteraction;
         if (idle < this.resumeDelay) {
-          if (this.active) this.forceStop();
-          return;
-        }
-        if (this.mouse.isHoverInside) {
           if (this.active) this.forceStop();
           return;
         }
@@ -997,7 +992,7 @@ export default function LiquidEther({
             if (canvas && canvas.parentNode) canvas.parentNode.removeChild(canvas);
             Common.renderer.dispose();
           }
-        } catch (e) {
+        } catch {
           void 0;
         }
       }
@@ -1043,24 +1038,6 @@ export default function LiquidEther({
 
     webgl.start();
 
-    // IntersectionObserver to pause rendering when not visible
-    const io = new IntersectionObserver(
-      entries => {
-        const entry = entries[0];
-        const isVisible = entry.isIntersecting && entry.intersectionRatio > 0;
-        isVisibleRef.current = isVisible;
-        if (!webglRef.current) return;
-        if (isVisible && !document.hidden) {
-          webglRef.current.start();
-        } else {
-          webglRef.current.pause();
-        }
-      },
-      { threshold: [0, 0.01, 0.1] }
-    );
-    io.observe(container);
-    intersectionObserverRef.current = io;
-
     const ro = new ResizeObserver(() => {
       if (!webglRef.current) return;
       if (resizeRafRef.current) cancelAnimationFrame(resizeRafRef.current);
@@ -1077,14 +1054,7 @@ export default function LiquidEther({
       if (resizeObserverRef.current) {
         try {
           resizeObserverRef.current.disconnect();
-        } catch (e) {
-          void 0;
-        }
-      }
-      if (intersectionObserverRef.current) {
-        try {
-          intersectionObserverRef.current.disconnect();
-        } catch (e) {
+        } catch {
           void 0;
         }
       }

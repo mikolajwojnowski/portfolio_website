@@ -1,0 +1,38 @@
+.section-card {
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    margin: 0 20vw 150px;
+    min-height: 220px;
+    position: relative;
+    padding: 40px;
+    background: rgba(8, 8, 16, 0.9);
+    border: 1px solid rgb(52, 52, 58);
+    border-radius: 10px;
+    scroll-margin-top: 120px;
+    backdrop-filter: blur(12px);
+}
+
+.section-heading {
+    margin: 0;
+    font-size: clamp(1.55rem, 2vw, 2rem);
+    font-weight: 100;
+    line-height: 1.2;
+    color: #efe8e8;
+}
+
+.section-card p,
+.section-card a,
+.section-card span,
+.section-card h1,
+.section-card h2 {
+    font-family: inherit;
+}
+
+@media (max-width: 900px) {
+    .section-card {
+        margin-left: 24px;
+        margin-right: 24px;
+        padding: 28px;
+    }
+}

@@ -1,43 +1,11 @@
 import './Tiles.css';
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
-import BlurText from "../blocks/TextAnimations/BlurText/BlurText.jsx"
 import { SiCredly } from "react-icons/si";
-import { FaInstagram } from "react-icons/fa";
 import TypewriterEffect from './Typewriter.jsx';
-const tiles = [
-  {
-    title: 'About',
-    icon: '👤',
-    link: '#about',
-    color: '#F7CAC9',
-  },
-  {
-    title: 'Projects',
-    icon: '💻',
-    link: '#projects',
-    color: '#92A8D1',
-  },
-  {
-    title: 'Contact',
-    icon: '✉️',
-    link: '#contact',
-    color: '#B5EAD7',
-  },
-  {
-    title: 'Blog',
-    icon: '📝',
-    link: '#blog',
-    color: '#FFDAC1',
-  },
-];
-const handleAnimationComplete = () => {
-    console.log('Animation completed!');
-};
-
 
 const Tiles = () => (
-    <div className="tiles-grid">
+    <section id="home" className="tiles-grid">
 
         <div className="div1"> 
             <div className="avatar">
@@ -59,11 +27,11 @@ const Tiles = () => (
         <a href="https://www.credly.com/users/mikolaj-wojnowski" className="logo-div-credly" target="_blank" rel="noopener noreferrer">
         <SiCredly size={65} style={{ color: '#fff' }}/>
         </a>
-        <a href="https://github.com/mikolajwojnowski" className="logo-div-instagram" target="_blank" rel="noopener noreferrer">
+        {/* <a href="https://github.com/mikolajwojnowski" className="logo-div-instagram" target="_blank" rel="noopener noreferrer">
         <FaInstagram size={50} style={{ color: '#fff' }}/>
-        </a>
+        </a> */}
 
-    </div>
+    </section>
 );
 
 export default Tiles;

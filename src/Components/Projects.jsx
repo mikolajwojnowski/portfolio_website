@@ -5,22 +5,24 @@ import { FaArrowRight } from "react-icons/fa6";
 
 const projects = [
     {
-        title: 'Portfolio Website',
-        description: 'A React and Vite portfolio with an interactive WebGL background, smooth anchors, and focused profile sections.',
-        stack: ['React', 'Vite', 'Three.js'],
-        link: 'https://github.com/mikolajwojnowski',
+        title: 'Tic Tac Toe',
+    
+        description: 'A Python implementation of the Tic Tac Toe game, featuring an AI opponent that uses the Minimax algorithm.',
+        stack: ['Python', 'Pygame'],
+        link: 'https://github.com/mikolajwojnowski/TicTacToe',
     },
     {
-        title: 'Portfolio Website',
-        description: 'A React and Vite portfolio with an interactive WebGL background, smooth anchors, and focused profile sections.',
-        stack: ['React', 'Vite', 'Three.js'],
-        link: 'https://github.com/mikolajwojnowski',
+        title: 'Image Classifier',
+        description: 'This project utilizes machine learning to classify images of animal faces using Python and the PyTorch library. The model is trained on the "Animal Faces" dataset from Kaggle',
+        stack: ['Python', 'PyTorch'],
+        link: 'https://github.com/mikolajwojnowski/image_classification',
     },
     {
-        title: 'Portfolio Website',
-        description: 'A React and Vite portfolio with an interactive WebGL background, smooth anchors, and focused profile sections.',
-        stack: ['React', 'Vite', 'Three.js'],
-        link: 'https://github.com/mikolajwojnowski',
+        title: 'Movie Catalog Web Application',
+        status: 'In Development',
+        description: 'This web application mimics the operation of a simplified movie catalog, similar to FilmAffinity. The application provides a platform where users can view movie details, rate movies, add comments, and receive recommendations.',
+        stack: ['PHP', 'HTML', 'JavaScript', 'CSS', 'MySQL','MATLAB'],
+        link: 'https://github.com/mikolajwojnowski/movies.git',
     },
 ];
 
@@ -32,7 +34,10 @@ const Projects = () => {
                 {projects.map((project, index) => (
                     <article className="project-card" key={`${project.title}-${index}`}>
                         <div>
-                            <h2>{project.title}</h2>
+                            <div className="project-title-row">
+                                <h2>{project.title}</h2>
+                                {project.status && <span className="project-status">{project.status}</span>}
+                            </div>
                             <p>{project.description}</p>
                         </div>
                         <div className="project-stack" aria-label={`${project.title} technologies`}>

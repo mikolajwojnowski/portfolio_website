@@ -5,17 +5,17 @@ import Tiles from './Components/Tiles';
 import About from './Components/About';
 import Tech from './Components/Tech'
 import Projects from './Components/Projects.jsx';
+import Footer from './Components/Footer.jsx';
 
 function App() {
-  
 
   return (
     <>
       <div className="background-layer" aria-hidden="true">
         <LiquidEther
           colors={[ '#5227FF', '#FF9FFC', '#B19EEF' ]}
-          mouseForce={40}
-          cursorSize={200}
+          mouseForce={20}
+          cursorSize={100}
           isViscous={true}
           viscous={30}
           iterationsViscous={32}
@@ -36,6 +36,7 @@ function App() {
       <About/>
       <Tech />
       <Projects />
+      <Footer />
    
      
     </>

@@ -20,8 +20,15 @@
     border-radius: 10px;
 }
 
+.project-title-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
 .project-card h2 {
-    margin: 0 0 14px;
+    margin: 0;
     font-size: 1.25rem;
     font-weight: 100;
     color: #efe8e8;
@@ -78,4 +85,14 @@
 
 .project-link:hover .project-link-arrow {
     transform: translateX(4px);
+}
+
+.project-status {
+  display: inline-block;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: rgba(255, 170, 0, 0.15);
+  color: #ffb000;
+  font-size: 0.8rem;
+  font-weight: 400;
 }
